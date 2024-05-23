@@ -54,6 +54,10 @@ M.View = {
   },
 }
 
+if vim.fn.has "winfixbuf" then
+  M.View.winopts.winfixbuf = true
+end
+
 -- The initial state of a tab
 local tabinitial = {
   -- The position of the cursor { line, column }
